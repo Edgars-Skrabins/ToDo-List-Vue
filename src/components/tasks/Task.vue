@@ -1,13 +1,11 @@
 <script lang="ts" setup>
 export type TaskProps = {
+  id: string,
   taskName: string;
   taskDescription: string;
+  onHandleDeleteBtnClick: (taskId: string) => void,
 };
 defineProps<TaskProps>();
-
-const handleDeleteBtnClick = () => {
-  console.log("Attempted delete");
-};
 
 const handleEditBtnClick = () => {
   console.log("Attempted edit");
@@ -15,14 +13,14 @@ const handleEditBtnClick = () => {
 </script>
 
 <template>
-  <main class="task">
+  <main class="task" key={{id}}>
     <p>{{ taskName }}</p>
     <p>
       {{ taskDescription }}
     </p>
 
     <div class="buttonWrapper">
-      <button @click="handleDeleteBtnClick">Delete</button>
+      <button @click="() => onHandleDeleteBtnClick(id)">Delete</button>
       <button @click="handleEditBtnClick">Edit</button>
     </div>
   </main>

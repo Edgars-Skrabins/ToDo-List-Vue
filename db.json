@@ -1,9 +1,19 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "taskName": "Feed the Cat",
-      "taskDescription": "Don't forget to feed the cat this time"
+      "id": "1",
+      "taskName": "Complete Unity Tutorial",
+      "taskDescription": "Follow the Unity tutorial to build a simple game."
+    },
+    {
+      "id": "2",
+      "taskName": "Create React Dashboard",
+      "taskDescription": "Develop a responsive dashboard using React and TypeScript."
+    },
+    {
+      "id": "3",
+      "taskName": "Implement API Authentication",
+      "taskDescription": "Secure the backend API using JWT authentication."
     }
   ]
 }
